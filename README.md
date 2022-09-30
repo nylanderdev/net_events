@@ -17,7 +17,7 @@ protocol! {
     }
 }
 ```
-Note that due to certain limitations of the Rust's current macro system, each non-empty enum needs a `match as` class, naming each field. In addition, only tuple-enums are supported.
+Note that due to certain limitations of the Rust's current macro system, each non-empty enum needs a `match as` clause, naming each field. In addition, only tuple-enums are supported.
 
 The crate also provides a `Connection` type for each protocol, instances of which can be constructed from TcpStream's.
 
