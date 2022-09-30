@@ -222,22 +222,3 @@ macro_rules! serial_big_endian {
 
 serial_big_endian!(u8, u16, u32, u64, u128);
 serial_big_endian!(i8, i16, i32, i64, i128);
-
-protocol! {
-    enum Event {
-        Awaiting(u8) match as (players),
-        See(u32, u32, u8) match as (x, y, char),
-        Know(u32, u32, u8) match as (x, y, char),
-        Hide(u32, u32) match as (x, y),
-        HideAll,
-        Forget(u32, u32) match as (x, y),
-        ForgetAll,
-        BombCount(u8) match as (count),
-        Flush,
-        Ping,
-        KeyUp(u8) match as (key),
-        KeyDown(u8) match as (key),
-        Lose,
-        Win
-    }
-}
